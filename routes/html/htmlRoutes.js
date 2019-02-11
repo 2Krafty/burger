@@ -10,7 +10,7 @@ router.route("/")
       console.log(err);
       return res.status(500).json(err);
     }
-    res.render("burgers", {burger_name,dbBurgers})
+    res.render("burgers", {burgerList: dbBurgers})
   });
 }); 
 

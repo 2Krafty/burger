@@ -3,7 +3,7 @@ const db = require("../config/connection");
 module.exports = {
 
   findAll: (req, res)=> {
-    db.query("SELECT * FROM burgers", (err, dbBurgers) {
+    db.query("SELECT * FROM burgers", (err, dbBurgers)=> {
       if(err) {
         console.log(err);
         return res.status(500).json(err);
